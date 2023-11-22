@@ -1,0 +1,82 @@
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-arrow.transitioning,
+.right-arrow.transitioning {
+  border-color: gray;
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel,
+.carousel2 {
+  display: flex;
+  max-width: 100%;
+  position: relative;
+  transform: translateZ(-100);
+}
+
+.carousel.sliding-transition,
+.carousel2.sliding-transition {
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-image,
+.carousel2-image {
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 1em;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.carousel-image.show,
+.carousel2-image.show {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.left-arrow,
+.right-arrow {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 0.5em;
+  border: 1px solid #184c84;
+}
+
+.left-arrow {
+  position: auto;
+  right: 15%;
+  top: 60%;
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 0.5em;
+  border: 1px solid #184c84;
+}
+
+.right-arrow {
+  position: auto;
+  right: 15%;
+  top: 78%;
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 0.5em;
+  border: 1px solid #184c84;
+}
