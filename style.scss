@@ -1,0 +1,136 @@
+$color_blue: #134880;
+$color_gray: #484a4c;
+$font_ssp: "Source Sans Pro", sans-serif;
+$bg_color_gray: #dddddd;
+$bg_color_white: white;
+$border_color_gray: gray;
+
+%marginals {
+  width: 941px;
+  height: 100px;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0px 0px 5px 5px;
+}
+
+footer,
+header {
+  @extend %marginals;
+  top: 0;
+  background-color: $bg_color_gray;
+}
+
+footer {
+  top: 630px;
+}
+
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+section {
+  max-width: 940px;
+  max-height: 730px;
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-arrow.transitioning,
+.right-arrow.transitioning {
+  border-color: $border_color_gray;
+}
+
+.carousel-container {
+  z-index: 1;
+}
+
+.carouselTop,
+.carouselBottom {
+  height: 200px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+
+  &.sliding-transition {
+    transition: transform 0.5s ease-in-out;
+  }
+}
+
+.carouselTop {
+  width: 1110px;
+  top: 160px;
+}
+
+.carouselBottom {
+  width: 960px;
+}
+
+.carouselTop-image,
+.carouselBottom-image {
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 1em;
+  margin-right: 10px;
+  width: auto;
+  height: 100%;
+}
+
+.carouselTop-image.show,
+.carouselBottom-image.show {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.left-arrow,
+.right-arrow {
+  width: 60px;
+  height: 60px;
+  background-color: $bg_color_white;
+  border-radius: 0.5em;
+  border: 1px solid #184c84;
+}
+
+.right-arrow {
+  margin-top: 10px;
+}
+
+.buttons {
+  position: fixed;
+  width: 60px;
+  height: 130px;
+  top: 370px;
+  left: 1050px;
+  z-index: 2;
+}
+
+.textBox {
+  width: 301px;
+  height: 296px;
+  top: 160px;
+  left: 1130px;
+  position: fixed;
+}
+
+.heading {
+  color: $color_blue;
+  font-size: 32px;
+  line-height: 37.5px;
+  font-family: $font_ssp;
+  margin: 0;
+}
+
+.text {
+  font-size: 18px;
+  line-height: 26px;
+  color: $color_gray;
+  font-family: $font_ssp;
+}

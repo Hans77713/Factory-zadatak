@@ -1,3 +1,23 @@
+footer,
+header {
+  width: 941px;
+  height: 100px;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0px 0px 5px 5px;
+}
+
+footer,
+header {
+  top: 0;
+  background-color: #dddddd;
+}
+
+footer {
+  top: 630px;
+}
+
 body {
   height: 100%;
   padding: 0;
@@ -7,7 +27,10 @@ body {
 }
 
 section {
-  min-height: 100vh;
+  max-width: 940px;
+  max-height: 730px;
+  margin: auto;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,50 +42,49 @@ section {
 }
 
 .carousel-container {
-  width: 100%;
+  z-index: 1;
+}
+
+.carouselTop,
+.carouselBottom {
+  height: 200px;
+  left: 0;
   overflow: hidden;
-}
-
-.carousel,
-.carousel2 {
+  position: absolute;
   display: flex;
-  max-width: 100%;
-  position: relative;
-  transform: translateZ(-100);
+  justify-content: flex-end;
 }
-
-.carousel.sliding-transition,
-.carousel2.sliding-transition {
+.carouselTop.sliding-transition,
+.carouselBottom.sliding-transition {
   transition: transform 0.5s ease-in-out;
 }
 
-.carousel-image,
-.carousel2-image {
+.carouselTop {
+  width: 1110px;
+  top: 160px;
+}
+
+.carouselBottom {
+  width: 960px;
+}
+
+.carouselTop-image,
+.carouselBottom-image {
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
   border-radius: 1em;
-  margin-bottom: 10px;
-  margin-left: 10px;
+  margin-right: 10px;
+  width: auto;
+  height: 100%;
 }
-.carousel-image.show,
-.carousel2-image.show {
+
+.carouselTop-image.show,
+.carouselBottom-image.show {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
 
 .left-arrow,
 .right-arrow {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  background-color: white;
-  border-radius: 0.5em;
-  border: 1px solid #184c84;
-}
-
-.left-arrow {
-  position: auto;
-  right: 15%;
-  top: 60%;
   width: 60px;
   height: 60px;
   background-color: white;
@@ -71,12 +93,37 @@ section {
 }
 
 .right-arrow {
-  position: auto;
-  right: 15%;
-  top: 78%;
-  width: 60px;
-  height: 60px;
-  background-color: white;
-  border-radius: 0.5em;
-  border: 1px solid #184c84;
+  margin-top: 10px;
 }
+
+.buttons {
+  position: fixed;
+  width: 60px;
+  height: 130px;
+  top: 370px;
+  left: 1050px;
+  z-index: 2;
+}
+
+.textBox {
+  width: 301px;
+  height: 296px;
+  top: 160px;
+  left: 1130px;
+  position: fixed;
+}
+
+.heading {
+  color: #134880;
+  font-size: 32px;
+  line-height: 37.5px;
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+}
+
+.text {
+  font-size: 18px;
+  line-height: 26px;
+  color: #484a4c;
+  font-family: "Source Sans Pro", sans-serif;
+}/*# sourceMappingURL=style.css.map */
